@@ -1,4 +1,4 @@
-class TaskJunggler < Formula
+class TaskJuggler < Formula
   desc "The TaskJuggler Project Management Software"
   homepage "http://taskjuggler.org/"
 
