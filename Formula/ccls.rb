@@ -16,7 +16,7 @@ class Ccls < Formula
       ENV.append "LDFLAGS", "-lclangBasic"
     end
     mkdir_p "#{buildpath}/release"
-    system "cmake", *args, "-Brelease", "-H."
+    system "cmake", *args, "-Brelease", "-H." "-DCMAKE_BUILD_TYPE=Debug"
     system "cmake", "--build", "release", "--target", "install"
   end
   test do
