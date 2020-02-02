@@ -4,7 +4,7 @@ class UvmSystemc < Formula
   url "https://github.com/ezchi/uvm-systemc.git", :tag => "1.0-beta-cmake-2", :revision => "21c834fcf15f0ca5644b5c34c2ecbc2143c37d69"
   depends_on "cmake" => :build
   depends_on "llvm" => :build
-  depends_on "systemc" => :build
+  depends_on "ezchi/homebrew-missingpiece/systemc" => :build
 
   def install
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
