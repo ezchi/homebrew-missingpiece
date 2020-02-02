@@ -6,7 +6,20 @@ class Systemc < Formula
   depends_on "llvm" => :build
 
   def install
-    system "cmake", "-Brelease", "-H.", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DBUILD_SOURCE_DOCUMENTATION=ON", "-DCMAKE_BUILD_TYPE=Release", "-DDISABLE_COPYRIGHT_MESSAGE=ON", "-DENABLE_ASSERTIONS=ON", "-DCMAKE_CXX_STANDARD=14", "-DCMAKE_CXX_STANDARD_REQUIRED=ON", "-DENABLE_PHASE_CALLBACKS=ON", "-DENABLE_PHASE_CALLBACKS_TRACING=OFF", "-DENABLE_PTHREADS=ON", "-DENABLE_EARLY_MAXTIME_CREATION=OFF"
+    ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
+    system "cmake", "-Brelease", "-H.",
+           "-DCMAKE_INSTALL_PREFIX=#{prefix}",
+           "-DBUILD_SOURCE_DOCUMENTATION=ON",
+           "-DCMAKE_BUILD_TYPE=Release",
+           "-DDISABLE_COPYRIGHT_MESSAGE=ON",
+           "-DENABLE_ASSERTIONS=ON",
+           "-DCMAKE_CXX_STANDARD=14",
+           "-DCMAKE_CXX_STANDARD_REQUIRED=ON",
+           "-DENABLE_PHASE_CALLBACKS=ON",
+           "-DENABLE_PHASE_CALLBACKS_TRACING=OFF",
+           "-DENABLE_PTHREADS=ON",
+           "-DENABLE_EARLY_MAXTIME_CREATION=OFF",
+           "-DCMAKE_CXX_COMPILER=clang++"
     system "cmake", "--build", "release", "--target", "install"
   end
 end
