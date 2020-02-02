@@ -6,7 +6,7 @@ class Systemc < Formula
   depends_on "llvm" => :build
 
   def install
-    system "cmake", "-Brelease", "-H.", "-DCMAKE_INSTALL_PREFIX=#{prefix}"
+    system "cmake", "-Brelease", "-H.", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DCMAKE_CXX_STANDARD=14", "-DCMAKE_CXX_STANDARD_REQUIRED=ON"
     system "cmake", "--build", "release", "--target", "install"
   end
 end
