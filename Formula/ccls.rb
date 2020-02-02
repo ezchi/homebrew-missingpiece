@@ -1,7 +1,7 @@
 class Ccls < Formula
   desc "C/C++ language server"
   homepage "https://github.com/MaskRay/ccls"
-  url "https://github.com/MaskRay/ccls.git", :tag => "0.20181225.7", :revision => "3810fb0a78d399a0a1916a1c59850b9b89f24b44"
+  url "https://github.com/MaskRay/ccls.git", :tag => "0.20190823.5", :revision => "a655ca966d842e6111f5b4a28e6d6eeff84d96f4"
   head "https://github.com/MaskRay/ccls.git"
   option "without-system-clang", "Downloading Clang from http://releases.llvm.org/ during the configure process"
   depends_on "cmake" => :build
