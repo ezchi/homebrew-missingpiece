@@ -1,7 +1,8 @@
 class UvmSystemc < Formula
   desc "Universal Verification Methodology (UVM) in SystemC"
   homepage "https://github.com/ezchi/uvm-systemc"
-  url "https://github.com/ezchi/uvm-systemc.git", :tag => "1.0-beta2-cmake-4", :revision => "b677c7e9776afff8d6b91f3437a5da0152ee2c91"
+  url "https://github.com/ezchi/uvm-systemc.git", :tag => "1.0-beta3-cmake-1", :revision => "042c031a5b0a387bd6753daffe6a6c5c8a317c8d"
+  version "1.0-beta3-cmake-1"
   depends_on "cmake" => :build
   depends_on "llvm" => :build
   depends_on "ezchi/homebrew-missingpiece/systemc" => :build
