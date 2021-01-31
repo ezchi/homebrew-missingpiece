@@ -7,6 +7,11 @@ class UvmSystemc < Formula
   depends_on "llvm" => :build
   depends_on "ezchi/homebrew-missingpiece/systemc" => :build
 
+  bottle do
+    root_url "https://github.com/ezchi/homebrew-missingpiece/raw/master/Bottles"
+    sha256 "84d5256036ff7a74887ee738e433771f8f22d2e0c37efc69d8ed03a1f18776bf" => :catalina
+  end
+
   def install
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
     ENV["SYSTEMC_HOME"] = Formula["ezchi/homebrew-missingpiece/systemc"].prefix
