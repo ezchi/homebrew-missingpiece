@@ -7,6 +7,11 @@ class Systemc < Formula
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
 
+  bottle do
+    root_url "https://github.com/ezchi/homebrew-missingpiece/raw/master/Bottles"
+    sha256 "ca5d73ac16958a5b9a20fce207a894d0d83fec4459c9ad6a893f693d3e2f5079" => :catalina
+  end
+
   def install
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
     system "cmake", "-Brelease", "-H.",
