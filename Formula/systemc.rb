@@ -3,6 +3,12 @@ class Systemc < Formula
   homepage "https://github.com/ezchi/systemc"
   url "https://github.com/ezchi/systemc.git", tag: "v2.3.3", revision: "e30ff935206887c35c81de837e244537fb3188d7"
 
+  bottle do
+    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
+    rebuild 1
+    sha256 catalina: "50ae697758703a513d395e5dd87fb210ca3b622c09a43460f1c8b3744f0737da"
+  end
+
   depends_on "cmake" => :build
   depends_on "doxygen" => :build
   depends_on "graphviz" => :build
