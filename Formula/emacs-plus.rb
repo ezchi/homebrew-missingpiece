@@ -112,7 +112,7 @@ class EmacsPlusAT29 < EmacsBase
     ]
 
     # Treesit
-    args << "--with-tree-sitter"
+    # args << "--with-tree-sitter"
 
     args << "--with-xml2"
     args << "--with-gnutls"
