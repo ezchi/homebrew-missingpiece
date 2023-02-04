@@ -1,6 +1,6 @@
 require_relative "../Library/EmacsBase"
 
-class EmacsPlusAT29 < EmacsBase
+class EmacsPlus < EmacsBase
   init 29
   version "29.0.60"
   env :std
@@ -104,15 +104,13 @@ class EmacsPlusAT29 < EmacsBase
     expand_path
 
     args = %W[
+      --with-tree-sitter
       --disable-dependency-tracking
       --disable-silent-rules
       --enable-locallisppath=#{HOMEBREW_PREFIX}/share/emacs/site-lisp
       --infodir=#{info}/emacs
       --prefix=#{prefix}
     ]
-
-    # Treesit
-    # args << "--with-tree-sitter"
 
     args << "--with-xml2"
     args << "--with-gnutls"
