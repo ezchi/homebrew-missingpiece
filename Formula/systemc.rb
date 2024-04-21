@@ -1,9 +1,9 @@
 class Systemc < Formula
   desc "Mirror of Core SystemC language and examples"
   homepage "https://github.com/ezchi/systemc"
-  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz", tag: "v2.3.3"
+  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz"
   version "3.0.0"
-  sha256 "06ab23bc392cad78da8ab5d413fdc5d1a694dfe2"
+  sha256 "4d0ab814719cfd6b1d195dd4bcb1b9e6edc5881b9a3e44117336a691992bf779"
 
   bottle do
     root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
@@ -23,12 +23,9 @@ class Systemc < Formula
       -DCMAKE_BUILD_TYPE=Release
       -DDISABLE_COPYRIGHT_MESSAGE=ON
       -DENABLE_ASSERTIONS=ON
-      -DCMAKE_CXX_STANDARD=14
+      -DCMAKE_CXX_STANDARD=17
       -DCMAKE_CXX_STANDARD_REQUIRED=ON
-      -DENABLE_PHASE_CALLBACKS=ON
-      -DENABLE_PHASE_CALLBACKS_TRACING=OFF
       -DENABLE_PTHREADS=ON
-      -DENABLE_EARLY_MAXTIME_CREATION=OFF
     ]
 
     ENV.append "CXXFLAGS", "-stdlib=libc++" if ENV.compiler == :clang
