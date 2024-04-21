@@ -1,7 +1,9 @@
 class Systemc < Formula
   desc "Mirror of Core SystemC language and examples"
   homepage "https://github.com/ezchi/systemc"
-  url "https://github.com/ezchi/systemc.git", tag: "v2.3.3", revision: "e30ff935206887c35c81de837e244537fb3188d7"
+  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz", tag: "v2.3.3"
+  version "3.0.0"
+  sha256 "06ab23bc392cad78da8ab5d413fdc5d1a694dfe2"
 
   bottle do
     root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
