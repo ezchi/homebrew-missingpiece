@@ -2,7 +2,6 @@ class Systemc < Formula
   desc "Mirror of Core SystemC language and examples"
   homepage "https://github.com/ezchi/systemc"
   url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz"
-  version "3.0.0"
   sha256 "4d0ab814719cfd6b1d195dd4bcb1b9e6edc5881b9a3e44117336a691992bf779"
 
   bottle do
