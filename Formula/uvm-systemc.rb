@@ -5,13 +5,16 @@ class UvmSystemc < Formula
   sha256 "38a51d3aa600b164cebcd95999c2a186863741ca00d1f5642dd179fe42b42793"
 
   bottle do
+    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/uvm-systemc-1"
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "e1c07ae15528714658c4e9d0a298415cd6490f2ef1fbc29dfca23cd9fea1e321"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "48b5e62f8f22615b187bd76da8d821e8ad7e5aec33ec1cd7a1bc7984af8533cb"
   end
 
   depends_on "cmake" => :build
-  depends_on "ezchi/homebrew-missingpiece/systemc" => :build
+  depends_on "doxygen" => :build
+  depends_on "graphviz" => :build
   depends_on "llvm" => :build
+  depends_on "ezchi/homebrew-missingpiece/systemc" => :build
 
   def install
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
