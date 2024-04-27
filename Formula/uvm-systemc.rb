@@ -7,7 +7,7 @@ class UvmSystemc < Formula
   bottle do
     root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/uvm-systemc-1"
     rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "188f57669aba233d40ee8772894fac8463e15c72d73f45d3028e0c746cfd4681"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3c2fea72ba70407be1a67a944d8dee8a08e85e435932db7f522a61d317d83c33"
   end
 
   depends_on "cmake" => :build
