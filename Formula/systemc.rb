@@ -25,8 +25,6 @@ class Systemc < Formula
       -DENABLE_PTHREADS=ON
     ]
 
-    # ENV.append "CXXFLAGS", "-stdlib=libc++" if ENV.compiler == :clang
-    # ENV.append_to_cflags "-stdlib=libc++" if ENV.compiler == :clang
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib # but link against system libc++
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
 
