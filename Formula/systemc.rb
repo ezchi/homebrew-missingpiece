@@ -1,6 +1,6 @@
 class Systemc < Formula
   desc "Library of SystemC Class"
-  homepage "https://github.com/ezchi/systemc"
+  homepage "https://github.com/ezchi/systemc-official"
   url "https://github.com/ezchi/systemc-official/archive/refs/tags/v3.0.1-ec.tar.gz"
   sha256 "f9509be592ddca6629d98e23b91712446fc1a018d54048df14a8f83dbdda42c8"
   head "https://github.com/ezchi/systemc-official.git", branch: "develop"
