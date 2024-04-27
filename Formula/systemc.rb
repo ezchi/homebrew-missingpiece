@@ -6,8 +6,8 @@ class Systemc < Formula
 
   bottle do
     root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
-    rebuild 1
-    sha256 catalina: "50ae697758703a513d395e5dd87fb210ca3b622c09a43460f1c8b3744f0737da"
+    rebuild 2
+    sha256 cellar: :any, arm64_sonoma: "5cfbca50848a68bfbc0278cfa0ab250d12376f33db9cc77ca272ec32b4f84c55"
   end
 
   depends_on "cmake" => :build
