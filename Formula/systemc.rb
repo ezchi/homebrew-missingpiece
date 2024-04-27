@@ -6,9 +6,8 @@ class Systemc < Formula
   head "https://github.com/ezchi/systemc-official.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-v3.0.1-ec"
-    rebuild 2
-    sha256 cellar: :any, arm64_sonoma: "d0a8720685dee280b87021da22626f4da4fd7d5eb618d6dcee4116988b429e4a"
+    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-3.0.1"
+    sha256 cellar: :any, arm64_sonoma: "ffcfc061b5a91be2a3a2a9e3ca4587eb3dd69b26244fe7e7783c8f5ff2c2aabb"
   end
 
   depends_on "cmake" => :build
