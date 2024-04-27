@@ -5,8 +5,8 @@ class UvmSystemc < Formula
   sha256 "38a51d3aa600b164cebcd95999c2a186863741ca00d1f5642dd179fe42b42793"
 
   bottle do
-    root_url "https://github.com/ezchi/homebrew-missingpiece/raw/master/Bottles"
-    sha256 cellar: :any_skip_relocation, catalina: "971caf61374c88dc7010b5f0b741597fda79e68aea5f2df276594b15dea7c0a0"
+    root_url "https://github.com/ezchi/homebrew-missingpiece/release/dowload/uvm-systemc-1.0-beta5"
+    sha256 cellar: :any, arm64_sonoma: "971caf61374c88dc7010b5f0b741597fda79e68aea5f2df276594b15dea7c0a0"
   end
 
   depends_on "cmake" => :build
