@@ -1,5 +1,5 @@
 class Systemc < Formula
-  desc "Mirror of Core SystemC language and examples"
+  desc "SystemC Class Library"
   homepage "https://github.com/ezchi/systemc"
   url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz"
   sha256 "4d0ab814719cfd6b1d195dd4bcb1b9e6edc5881b9a3e44117336a691992bf779"
@@ -22,13 +22,13 @@ class Systemc < Formula
       -DCMAKE_BUILD_TYPE=Release
       -DDISABLE_COPYRIGHT_MESSAGE=ON
       -DENABLE_ASSERTIONS=ON
-      -DCMAKE_CXX_STANDARD=14
+      -DCMAKE_CXX_STANDARD=17
       -DCMAKE_CXX_STANDARD_REQUIRED=ON
       -DENABLE_PTHREADS=ON
     ]
 
-    ENV.append "CXXFLAGS", "-stdlib=libc++" if ENV.compiler == :clang
-    ENV.append_to_cflags "-stdlib=libc++" if ENV.compiler == :clang
+    # ENV.append "CXXFLAGS", "-stdlib=libc++" if ENV.compiler == :clang
+    # ENV.append_to_cflags "-stdlib=libc++" if ENV.compiler == :clang
     ENV.remove "HOMEBREW_LIBRARY_PATHS", Formula["llvm"].opt_lib # but link against system libc++
     ENV["CLANG_BASE_PATH"] = Formula["llvm"].prefix
 
@@ -44,7 +44,7 @@ class Systemc < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++14", "-L#{lib}", "-lsystemc", "test.cpp"
+    system ENV.cxx, "-std=c++17", "-L#{lib}", "-lsystemc", "test.cpp"
     system "./a.out"
   end
 end
