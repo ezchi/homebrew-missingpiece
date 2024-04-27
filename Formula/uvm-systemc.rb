@@ -1,8 +1,9 @@
 class UvmSystemc < Formula
   desc "Universal Verification Methodology (UVM) in SystemC"
   homepage "https://github.com/ezchi/uvm-systemc"
-  url "https://github.com/ezchi/uvm-systemc.git", tag: "1.0-beta5-cmake-1", revision: "3f9954745cedaea5a75293c8e9923502bf74d67e"
-  version "1.0-beta5-cmake-1"
+  url "https://github.com/ezchi/uvm-systemc/archive/refs/tags/1.0-beta5-cmake-1.tar.gz"
+  sha256 "38a51d3aa600b164cebcd95999c2a186863741ca00d1f5642dd179fe42b42793"
+
   bottle do
     root_url "https://github.com/ezchi/homebrew-missingpiece/raw/master/Bottles"
     sha256 cellar: :any_skip_relocation, catalina: "971caf61374c88dc7010b5f0b741597fda79e68aea5f2df276594b15dea7c0a0"

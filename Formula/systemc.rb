@@ -1,13 +1,11 @@
 class Systemc < Formula
   desc "Library of SystemC Class"
   homepage "https://github.com/ezchi/systemc"
-  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz"
-  sha256 "4d0ab814719cfd6b1d195dd4bcb1b9e6edc5881b9a3e44117336a691992bf779"
+  url "https://github.com/ezchi/systemc-official/archive/refs/tags/v3.0.1-ec.tar.gz"
+  sha256 "f9509be592ddca6629d98e23b91712446fc1a018d54048df14a8f83dbdda42c8"
+  head "https://github.com/ezchi/systemc-official.git", branch: "develop"
 
   bottle do
-    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
-    rebuild 2
-    sha256 cellar: :any, arm64_sonoma: "5cfbca50848a68bfbc0278cfa0ab250d12376f33db9cc77ca272ec32b4f84c55"
   end
 
   depends_on "cmake" => :build
