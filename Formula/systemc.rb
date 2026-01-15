@@ -1,13 +1,11 @@
 class Systemc < Formula
   desc "Mirror of Core SystemC language and examples"
   homepage "https://github.com/ezchi/systemc"
-  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.0.tar.gz"
-  sha256 "4d0ab814719cfd6b1d195dd4bcb1b9e6edc5881b9a3e44117336a691992bf779"
+  url "https://github.com/accellera-official/systemc/archive/refs/tags/3.0.2.tar.gz"
+  sha256 "9b3693ed286aab958b9e5d79bb0ad3bc523bbc46931100553275352038f4a0c4"
 
   bottle do
-    root_url "https://github.com/ezchi/homebrew-missingpiece/releases/download/systemc-2.3.3"
-    rebuild 1
-    sha256 catalina: "50ae697758703a513d395e5dd87fb210ca3b622c09a43460f1c8b3744f0737da"
+    sha256 cellar: :any, arm64_tahoe: "98e33e0fc1536b2281119619325735eae54de2fb0f3979da5756f09bc83917c5"
   end
 
   depends_on "cmake" => :build
@@ -22,7 +20,7 @@ class Systemc < Formula
       -DCMAKE_BUILD_TYPE=Release
       -DDISABLE_COPYRIGHT_MESSAGE=ON
       -DENABLE_ASSERTIONS=ON
-      -DCMAKE_CXX_STANDARD=14
+      -DCMAKE_CXX_STANDARD=17
       -DCMAKE_CXX_STANDARD_REQUIRED=ON
       -DENABLE_PTHREADS=ON
     ]
@@ -44,7 +42,7 @@ class Systemc < Formula
         return 0;
       }
     EOS
-    system ENV.cxx, "-std=c++14", "-L#{lib}", "-lsystemc", "test.cpp"
+    system ENV.cxx, "-std=c++17", "-L#{lib}", "-lsystemc", "test.cpp"
     system "./a.out"
   end
 end
