@@ -5,7 +5,7 @@ class Systemc < Formula
   sha256 "9b3693ed286aab958b9e5d79bb0ad3bc523bbc46931100553275352038f4a0c4"
 
   bottle do
-    sha256 cellar: :any, arm64_tahoe: "98e33e0fc1536b2281119619325735eae54de2fb0f3979da5756f09bc83917c5"
+    sha256 cellar: :any, arm64_tahoe: "b80892b040f098960440e55ce3770912f83643975967362fc8c0639a1bb25ab3"
   end
 
   depends_on "cmake" => :build
